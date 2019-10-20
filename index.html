@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        
+        .header{
+            width: 700px;
+            height: 200px;
+            background-color: yellowgreen;
+
+        }
+        .title{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .inputs{
+            display:flex;
+            flex-direction: row;
+            
+        }
+        h4{
+            margin: 0;
+            padding: 0;
+
+        }
+        .btn {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+        .main {
+            width: 700px;
+            height: auto;
+            background-color: yellowgreen;
+            display:flex;
+            flex-direction: row;
+            align-items: center;
+            margin: auto;
+        }
+        ul{
+            list-style-type: none;
+        }
+        
+        
+    </style>
+    <script>
+        function add () {
+            var inputPeople = document.getElementById('people').value;
+			var listOneNode = document.getElementById('name');				
+			var liOneNode = document.createElement("LI");				
+			var txtOneNode = document.createTextNode (inputPeople);
+            liOneNode.appendChild(txtOneNode);
+            listOneNode.appendChild(liOneNode);
+            var inputPhone = document.getElementById('phone').value;
+			var listTwoNode = document.getElementById('telefon');				
+			var liTwoNode = document.createElement("LI");				
+			var txtTwoNode = document.createTextNode (inputPhone);
+            liTwoNode.appendChild(txtTwoNode);
+            listTwoNode.appendChild(liTwoNode);
+
+        }
+    </script>
+</head>
+<body > <div class="title">
+    <h1>Agenda</h1>
+    <div class="header">
+        <div class="inputs">
+            <h4>Nume</h4> <input type="text" id="people">
+            <h4>Telefon</h4> <input type="text" id="phone">
+
+        </div>
+        <button class="btn" onclick="add()">Adauga contact</button>
+
+    </div>
+</div>
+
+<div class="main">
+    <ul id="name"></ul>
+    <ul id="telefon"></ul>
+    <ul id="edit"></ul>
+    <ul id="delete"></ul>
+    
+
+</div>
+
+</body>
+</html>
